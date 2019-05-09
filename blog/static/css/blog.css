@@ -1,0 +1,8 @@
+body{
+	padding-left: 1em;
+}
+
+h1 a, h2 a {
+	color: #ff6a00;
+	font-family: 'Lobster', cursive;
+}

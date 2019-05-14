@@ -11,6 +11,8 @@
 
 		<!-- Bootsrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -20,13 +22,17 @@
 	</head>
 
 	<body>
+		<nav class="navbar fixed-top navbar-dark">
+				<a class="navbar-brand" href="#">Navbar</a>
+		</nav>
 		<div class="page-header jumbotron text-center"> 
-			<h1><a href="">Chronarchitect's Blog</a></h1>
-			<a href="{% url 'post_new' %}" class="top-menu"><i class="material-icons">add</i></a>
+		<div class="container-fluid">	
+			<h1><a href="">Chronarchy</a></h1>
+			</div>
 		</div>
 		<div class="content container">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-12">
 					{% block content %}
 					{% endblock %}
 				</div>

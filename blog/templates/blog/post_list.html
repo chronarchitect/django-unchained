@@ -9,7 +9,7 @@
 	<div class="title card-title">
 		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }} </a></h2>
 	</div>
-	<div class="content">
+	<div class="card-text content">
 		<p>{{ post.text|linebreaksbr }}</p>
 	</div>
 </div>

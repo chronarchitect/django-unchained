@@ -26,8 +26,18 @@
 .post{
 	font-family: 'Work-Sans', sans-serif;
 	margin-bottom: 10px;
-	padding: 20px;
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.post-img{
+	max-height: 200px;
+	overflow: hidden;
+}
+
+.post-img img{
+	max-height: initial;
+	display: block;
+	margin-top: -20%;
 }
 
 .post:hover{

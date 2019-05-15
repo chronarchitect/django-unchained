@@ -10,6 +10,7 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    image = models.FileField(upload_to='uploads/%Y/%m/%d', default='uploads/default-post.png')
 
     def publish(self):
         self.published_date = timezone.now()

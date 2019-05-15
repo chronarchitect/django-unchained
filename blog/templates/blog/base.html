@@ -22,10 +22,10 @@
 	</head>
 
 	<body>
-
 		<nav class="navbar navbar-expand-lg fixed-top navbar-dark justify-content-end">
-			<a class="navbar-brand" href="#">Blog</a>
+			<a class="navbar-brand" href="">Blog</a>
 			<div class="navbar-nav nav-tabs">
+				<a class="nav-item nav-link" href="{% url 'post_list' %}"><i class="material-icons">home</i></a>
 				{% if user.is_authenticated  %}
 				<a class="nav-item nav-link" href="{% url 'post_new' %}"><i class="material-icons">add</i></a>
 				{% endif %}
@@ -37,9 +37,10 @@
 			<h1><a href="{% url 'post_list' %}">Chronarchy</a></h1>
 			</div>
 		</div>
-		<div class="content container">
+		<div class="content container-fluid">
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-2"></div>
+				<div class="col-sm-8">
 					{% block content %}
 					{% endblock %}
 				</div>

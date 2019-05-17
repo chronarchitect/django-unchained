@@ -25,7 +25,7 @@ SECRET_KEY = 'w=79cj-&g!c11pdq44y@(u*ho-g)8f#s$ug-kd2avkccsx@e58'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.localtunnel.me', '.serveo.net']
+ALLOWED_HOSTS = ['127.0.0.1', 'chronarchitect.pythonanywhere.com', '.serveo.net']
 
 
 # Application definition

@@ -1,3 +1,3 @@
 # Making a blog using Django
 
-#### Just following a basic tutorial
+Creating a blog while also learning the django framework

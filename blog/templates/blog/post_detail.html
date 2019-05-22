@@ -4,21 +4,22 @@
     <div class="post card">
 		<img class="card-img-top" src="/media/{{ post.image }}">
 		<div class = "card-body">
-			<div class="row">
 			{% if post.published_date %}
-	            <div class="date small text-muted col-sm-11">
-	                {{ post.published_date }}
-	            </div>
-	        {% endif %}
-			{% if user.is_authenticated %}
-				<a class="btn btn-dark btn-sm col-sm-1" href="{% url 'post_edit' pk=post.pk %}"><i class="material-icons">edit</i></a>
+			<div class="published-date text-muted">
+				<small><p> published : {{ post.published_date }}</p></small>
+			</div>
 			{% endif %}
+			<div class="text-right">
+				<a href="{% url 'post_edit' pk=post.pk %}" class="btn btn-primary"><i class="material-icons">edit</i></a>
 			</div>
 			<div class="card-title title">
 	        	<h2>{{ post.title }}</h2>
 			</div>
 			<div class="card-text content">
 				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+			<div class="post-score card-footer">
+				{{ post.score }}
 			</div>
 		</div>
     </div>

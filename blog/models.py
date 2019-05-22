@@ -16,13 +16,6 @@ class Post(models.Model):
     def publish(self):
         self.published_date = timezone.now()
         self.save()
-
-    def upvote(self):
-        self.score = self.score + 1
-
-    def downvote(self):
-        self.score = self.score - 1
-
+    
     def __str__(self):
         return self.title
-

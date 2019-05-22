@@ -3,6 +3,8 @@
 <html lang="en">
 	<head>
 		<title>Django Unchained</title>
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
 		<!-- REQUIRED meta tags -->
 		<meta charset="utf-8">
@@ -22,7 +24,9 @@
 	</head>
 
 	<body>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-dark justify-content-end">
+		
+		<nav class="navbar navbar-expand-lg sticky-top navbar-dark ">
+		<div class="container-fluid">
 			<a class="navbar-brand" href="">Blog</a>
 			<div class="navbar-nav nav-tabs">
 				<a class="nav-item nav-link" href="{% url 'post_list' %}"><i class="material-icons">home</i></a>
@@ -30,8 +34,8 @@
 				<a class="nav-item nav-link" href="{% url 'post_new' %}"><i class="material-icons">add</i></a>
 				{% endif %}
 			</div>
+		</div>
 		</nav>
-
 		<div class="page-header jumbotron text-center"> 
 		<div class="container-fluid">	
 			<h1><a href="{% url 'post_list' %}">Chronarchy</a></h1>

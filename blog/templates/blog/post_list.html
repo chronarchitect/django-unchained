@@ -7,15 +7,18 @@
 		<img src="/media/{{ post.image }}">
 	</div>
 	<div class="card-body">
-	<div class="published-date text-muted">
-		<small><p> published : {{ post.published_date }}</p></small>
-	</div>
-	<div class="title card-title">
-		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }} </a></h2>
-	</div>
-	<div class="card-text content">
-		<p>{{ post.text|linebreaksbr }}</p>
-	</div>
+		<div class="published-date text-muted">
+			<small><p> published : {{ post.published_date }}</p></small>
+		</div>
+		<div class="title card-title">
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }} </a></h2>
+		</div>
+		<div class="card-text content">
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+		<div class="post-score card-footer">
+			{{ post.score }}
+		</div>
 	</div>
 </div>
 {% endfor %}

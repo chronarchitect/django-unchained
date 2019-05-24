@@ -5,7 +5,7 @@ from.forms import PostForm
 # Create your views here.
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 def post_detail(request, pk):
@@ -40,8 +40,14 @@ def post_edit(request, pk):
 
 def upvote(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.upvote()
+    post.score += 1
+    post.save()
+    response = post_list(request)
+    return response
 
 def downvote(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    post.downvote()
+    post.score -= 1
+    post.save()
+    response = post_list(request)
+    return response

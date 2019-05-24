@@ -16,9 +16,16 @@
 		<div class="card-text content">
 			<p>{{ post.text|linebreaksbr }}</p>
 		</div>
-		<div class="post-score card-footer">
+		<div class="upvote btn">
+			<a href="{% url 'upvote' pk=post.pk %}"><i class="material-icons">arrow_upward</i></a>
+		</div>
+		<div class="post-score btn btn-dark">
 			{{ post.score }}
 		</div>
+		<div class="downvote btn">
+			<a href="{% url 'downvote' pk=post.pk %}"><i class="material-icons">arrow_downward</i></a>
+		</div>
+
 	</div>
 </div>
 {% endfor %}

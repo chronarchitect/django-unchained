@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
         path('post/<int:pk>/edit', views.post_edit, name='post_edit'),
         path('upvote/<int:pk>/', views.upvote, name='upvote'),
         path('downvote/<int:pk>/', views.downvote, name='downvote'),
+        path('accounts/', include('django.contrib.auth.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

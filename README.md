@@ -1,6 +1,6 @@
 # Blogging Website using Django
 
-![GitHub contributors](https://img.shields.io/github/contributors/chronarchitect/django-unchained.svg?color=red&style=for-the-badge)
+![GitHub contributors](https://img.shields.io/github/contributors/chronarchitect/django-unchained.svg?color=red&style=for-the-badge) <br/>
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 A blog site written in Python using Django as the back end.
@@ -18,7 +18,7 @@ This uses SQLite3 for the database.
 ***
 
 #### Website Preview
-[![Screenshot](/home/chronarchitect/Documents/django-unchained/media/Screen.png)](https://chronarchitect.pythonanywhere.com)
+![Screenshot](/home/chronarchitect/Documents/django-unchained/media/Screen.png)]
 
 ***
 

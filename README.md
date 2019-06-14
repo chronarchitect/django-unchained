@@ -18,7 +18,7 @@ This uses SQLite3 for the database.
 ***
 
 #### Website Preview
-![Screenshot](/home/chronarchitect/Documents/django-unchained/media/Screen.png)]
+![Screenshot](/home/chronarchitect/Documents/django-unchained/media/Screen.png)
 
 ***
 
